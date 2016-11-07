@@ -29,7 +29,7 @@ export class AppComponent {
   loadMore() {
     this.isLoading = true;
 
-    this.pokedexService.getPokemon(this.pokemon.length, 9)
+    this.pokedexService.getPokemon(this.pokemon.length, 100)
       .then(pokemon => {
         pokemon = pokemon.map(p => {
           p.imageLoaded = false;
