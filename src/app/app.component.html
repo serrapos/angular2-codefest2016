@@ -1,11 +1,11 @@
 <form id="filter">
   <label>Filtrar por nombre.</label>
-  <input type="text" [(ngModel)]="filterText" [ngModelOptions]="{standalone: true}" />
+  <input type="text" #listFilter (keyup)="0" />
 </form>
 <h1>Angular 2 Pokédex</h1>
 <hr>
 <div class="pokedex">
-  <div class="pokedex-pokemon" *ngFor="let p of (pokemon | filter:filterText)">
+  <div class="pokedex-pokemon" *ngFor="let p of pokemon | filter:listFilter.value">
     
     <div class="pokedex-pokemon-id">
       #{{ p.id}}

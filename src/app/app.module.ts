@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 
-import { PokedexService } from './pokedex.service';
-import { CapitalizePipe } from './capitalize.pipe';
-import { FilterTextPipe } from './filter.pipe';
+import { PokedexService } from './service/pokedex.service';
+import { CapitalizePipe } from './pipe/capitalize.pipe';
+import { FilterTextPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
