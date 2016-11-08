@@ -1,15 +1,9 @@
 /* tslint:disable */
 
 import { Component } from '@angular/core';
-
 import { PokedexService } from './service/pokedex.service';
 import { Pokemon } from './pokemon';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
-})
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -20,7 +14,7 @@ export class AppComponent {
   pokemon: Pokemon[] = [];
   isLoading: boolean = false;
   error: boolean = false;
-  filterText : string;
+  //filterText : string;
 
   constructor(private pokedexService: PokedexService) { }
 
