@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 import { Component } from '@angular/core';
 
 import { PokedexService } from './service/pokedex.service';
