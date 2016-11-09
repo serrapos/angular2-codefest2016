@@ -11,7 +11,7 @@ import { Pokemon } from './pokemon';
 })
 
 export class AppComponent {
-  pokemon: Pokemon[] = [];
+  pokemons: Pokemon[] = [];
   isLoading: boolean = false;
   error: boolean = false;
   //filterText : string;
@@ -25,13 +25,13 @@ export class AppComponent {
   loadMore() {
     this.isLoading = true;
 
-    this.pokedexService.getPokemon(this.pokemon.length, 100)
-      .then(pokemon => {
-        pokemon = pokemon.map(p => {
+    this.pokedexService.getPokemon(this.pokemons.length, 100)
+      .then(pokemons => {
+        pokemons = pokemons.map(p => {
           p.imageLoaded = false;
           return p;
         });
-        this.pokemon = this.pokemon.concat(pokemon);
+        this.pokemons = this.pokemons.concat(pokemons);
         this.isLoading = false;
         this.error = false;
       })

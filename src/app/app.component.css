@@ -17,7 +17,7 @@
 .navbar-brand{
   font-family: 'Lobster Two', cursive;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   
   
 }
@@ -46,17 +46,6 @@
   font-size: 22px;
 }
 
-.load-button {
-  display: block;
-  margin: 20px auto;
-  border: 0;
-  border-radius: 2px;
-  background-color: rgb(144, 144, 144);
-  color: rgb(255, 255, 255);
-  max-width: 200px;
-  padding: 10px 50px;
-  font-size: 22px;
-}
 
 .load-button[disabled] {
   opacity: 0.6;

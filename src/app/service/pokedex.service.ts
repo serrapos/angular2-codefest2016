@@ -6,11 +6,11 @@ import 'rxjs/add/operator/toPromise';
 export class PokedexService {
   //Conexion directa a la pokeapi
   private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon/';
-  private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
+  //private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
   //Llamada local a la pokeapi
   //private baseUrl: string = '/data/get-250-pokemon.json';
-  //private baseSpriteUrl: string = '/data/img/';
+  private baseSpriteUrl: string = '/data/img/';
 
   constructor(private http: Http) { }
 
