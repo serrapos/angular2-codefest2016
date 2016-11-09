@@ -26,9 +26,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <img src="/img/pokedex.png" class="pokelogo">
-
       <p class="alert alert-info" [hidden]="!listFilter.value">Filtrando por: {{listFilter.value}}</p>
-
       <div class="row">
         <div class="pokedex-pokemon" *ngFor="let p of pokemons | filter:listFilter.value" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
           <div class="thumbnail">
@@ -46,9 +44,8 @@
     <button class="btn btn-default btn-primary btn-lg" (click)="loadMore()" [disabled]="isLoading">
       <span *ngIf="!error">
         <span *ngIf="isLoading">Cargando...</span>
-        <span *ngIf="!isLoading" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-        Cargar más
-        
+        <span *ngIf="!isLoading" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        <span *ngIf="!isLoading">Ver más</span>
       </span>
     <span *ngIf="error">Error cargando.</span>
     </button>
