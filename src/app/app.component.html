@@ -21,25 +21,25 @@
       </form>
     </div>
   </div>
-  < </nav>
-    <div class="container">
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <img src=" /img/pokedex.png" class="pokelogo">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <img src=" /img/pokedex.png" class="pokelogo">
-          <div class="row">
-            <div class="pokedex-pokemon" *ngFor="let p of pokemon | filter:listFilter.value" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-              <div class="thumbnail">
-                <img class="img-rounded" [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
-                  [attr.src]="p.sprite">
-                <div class="caption">
-                  <h3 class="pokeName"> <span class="text-danger">#{{ p.id}}</span> {{ p.name | capitalize }}</h3>
-                </div>
-              </div>
+        <div class="pokedex-pokemon" *ngFor="let p of pokemon | filter:listFilter.value" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+          <div class="thumbnail">
+            <img class="img-rounded" [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
+              [attr.src]="p.sprite">
+            <div class="caption">
+              <h3 class="pokeName"> <span class="text-danger">#{{ p.id}}</span> {{ p.name | capitalize }}</h3>
             </div>
           </div>
         </div>
       </div>
-      <button class="load-button" (click)="loadMore()" [disabled]="isLoading">
+    </div>
+  </div>
+  <button class="load-button" (click)="loadMore()" [disabled]="isLoading">
   <span *ngIf="!error">
     <span *ngIf="isLoading">Cargando...</span>
 <span *ngIf="!isLoading">Cargar más</span>
@@ -48,4 +48,4 @@
     Error cargando.
   </span>
 </button>
-    </div>
+</div>
