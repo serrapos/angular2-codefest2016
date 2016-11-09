@@ -27,12 +27,26 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <img src=" /img/pokedex.png" class="pokelogo">
       <div class="row">
+<<<<<<< HEAD
         <div class="pokedex-pokemon" *ngFor="let p of pokemon | filter:listFilter.value" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
           <div class="thumbnail">
             <img class="img-rounded" [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
               [attr.src]="p.sprite">
             <div class="caption">
               <h3 class="pokeName"> <span class="text-danger">#{{ p.id}}</span> {{ p.name | capitalize }}</h3>
+=======
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <img src="/img/pokedex.png" class="pokelogo">
+          <div class="row">
+            <div class="pokedex-pokemon" *ngFor="let p of pokemon | filter:listFilter.value" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+              <div class="thumbnail">
+                <img class="img-rounded" [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true"
+                  [attr.src]="p.sprite">
+                <div class="caption">
+                  <h3 class="pokeName"> <span class="text-danger">#{{ p.id}}</span> {{ p.name | capitalize }}</h3>
+                </div>
+              </div>
+>>>>>>> 727913102367e5daf312580bf3d271de7f1521fb
             </div>
           </div>
         </div>
