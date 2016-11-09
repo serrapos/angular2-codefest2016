@@ -46,6 +46,10 @@
   font-size: 22px;
 }
 
+.alert{
+  font-size: 25px;
+}
+
 
 .load-button[disabled] {
   opacity: 0.6;
